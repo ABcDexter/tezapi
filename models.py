@@ -7,6 +7,8 @@ from typing import Optional
 #################
 #    Classes    #   
 #################
+
+
 class Category(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)      # Optional makes it nullable before insertion
     name: str = Field(min_length=3, max_length=15, index=True)     # Name must be between 3 and 15 characters long
